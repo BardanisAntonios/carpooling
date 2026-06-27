@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 bg-white p-4 shadow rounded">
+        <h3>Καταχώρηση Νέας Διαδρομής</h3>
+        <p class="text-muted small">Ο αλγόριθμός μας θα υπολογίσει αυτόματα το περιβαλλοντικό αποτύπωμα.</p>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+                {{ form.start_point.label(class="form-label") }}
+                {{ form.start_point(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.end_point.label(class="form-label") }}
+                {{ form.end_point(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.departure_time.label(class="form-label") }}
+                {{ form.departure_time(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.seats.label(class="form-label") }}
+                {{ form.seats(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-success w-100") }}
+        </form>
+    </div>
+</div>
+{% endblock %}

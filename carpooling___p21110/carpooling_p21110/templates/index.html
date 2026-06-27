@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Διαθέσιμα Δρομολόγια</h2>
+<div class="list-group">
+    {% for r in routes %}
+    <div class="list-group-item shadow-sm mb-3 border-start border-4 border-success">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">📍 {{ r.start_point }} ➔ {{ r.end_point }}</h5>
+            <small class="text-primary fw-bold">{{ r.departure_time.strftime('%d/%m %H:%M') }}</small>
+        </div>
+        <p class="mb-1">Οδηγός: <strong>{{ r.driver.username }}</strong> | Διαθέσιμες Θέσεις: <span class="badge bg-info">{{ r.available_seats }}</span></p>
+        
+        <!-- ΕΔΩ ΦΑΙΝΕΤΑΙ Ο ΑΛΓΟΡΙΘΜΟΣ -->
+        <div class="bg-light p-2 rounded mt-2">
+            <small>
+                🌱 <strong>Eco-Impact:</strong> -{{ (r.distance_km * 0.12)|round(2) }}kg CO2 | 
+                📏 <strong>Απόσταση:</strong> {{ r.distance_km }}km |
+                💰 <strong>Προτεινόμενη Συνεισφορά:</strong> {{ (r.distance_km * 0.15)|round(2) }}€
+            </small>
+        </div>
+        
+        <a href="{{ url_for('book_route', route_id=r.id) }}" class="btn btn-success btn-sm mt-2">Κράτηση Θέσης</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
