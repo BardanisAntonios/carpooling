@@ -4,21 +4,21 @@
 
 It was developed as part of the "Internet Information Systems" course (December 2025).
 
-**Author:** Antonios Bardanis (Registration Number: P21110)[cite: 13]
+**Author:** Antonios Bardanis (Registration Number: P21110)
 
 ## 🛠️ Technology Stack
-* **Backend:** Python 3.10, Flask Framework[cite: 13]
-* **Database:** SQLite (via SQLAlchemy ORM)[cite: 13]
-* **Frontend:** HTML5, CSS3, Bootstrap 5 (Responsive Design)[cite: 13]
-* **Security:** Bcrypt (password hashing), CSRF Tokens, Role-Based Access Control (RBAC)[cite: 13]
+* **Backend:** Python 3.10, Flask Framework
+* **Database:** SQLite (via SQLAlchemy ORM)
+* **Frontend:** HTML5, CSS3, Bootstrap 5 (Responsive Design)
+* **Security:** Bcrypt (password hashing), CSRF Tokens, Role-Based Access Control (RBAC)
 
 ## ✨ Key Features & Core Logic
-* **Data Retrieval (APIs):** Utilizes the Nominatim API (OpenStreetMap) for geocoding addresses and the OSRM API (Open Source Routing Machine) to calculate actual driving distances[cite: 13].
-* **Environmental Impact:** Automatically calculates the kilograms of CO2 saved based on the route distance (using a coefficient of 0.12kg/km)[cite: 13].
-* **Economic Suggestion:** Recommends a fair gas contribution cost based on the distance[cite: 13].
+* **Data Retrieval (APIs):** Utilizes the Nominatim API (OpenStreetMap) for geocoding addresses and the OSRM API (Open Source Routing Machine) to calculate actual driving distances.
+* **Environmental Impact:** Automatically calculates the kilograms of CO2 saved based on the route distance (using a coefficient of 0.12kg/km).
+* **Economic Suggestion:** Recommends a fair gas contribution cost based on the distance.
 * **User Roles:**
-  * **User (Student/Staff):** Can register, create routes, and book seats on routes created by others[cite: 13].
-  * **Administrator:** Accesses the Admin Panel to view and delete users, triggering a Cascade Delete to clear their associated routes and maintain database integrity[cite: 13].
+  * **User (Student/Staff):** Can register, create routes, and book seats on routes created by others.
+  * **Administrator:** Accesses the Admin Panel to view and delete users, triggering a Cascade Delete to clear their associated routes and maintain database integrity.
 
 ## 🚀 Installation & Setup
 To run the application locally, follow these steps:
